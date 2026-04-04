@@ -1,0 +1,1 @@
+ALTER TABLE "records" RENAME COLUMN "id" TO "r_id";
