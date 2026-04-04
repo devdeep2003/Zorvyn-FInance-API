@@ -6,6 +6,7 @@ import { records } from "../models/db.schema.js";
 
 //CREATE USER
 export const createUser = async (req, res) => {
+  console.log(req.body);
   const { name, email, password, role } = req.body;
 
   if (!name || !email || !password || !role) {

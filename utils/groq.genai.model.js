@@ -5,7 +5,7 @@ const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
 
 export const generateInsightsGroq = async (prompt) => {
   const response = await groq.chat.completions.create({
-    model: "llama-3.3-70b-versatile", // free and powerful
+    model: "llama-3.3-70b-versatile", 
     messages: [
       { role: "user", content: prompt }
     ],

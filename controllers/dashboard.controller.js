@@ -11,7 +11,7 @@ export const getTotalIncome = async (req, res) => {
   if (role === "admin" || role === "analyst")
     return res
       .status(200)
-      .json({ message: `Data consists of all the aggregated data of viewer, ${role} can access the records or through /api/dashboard/:email` });
+      .json({ message: `Data consists of all the aggregated data of viewer`});
   try {
     const totalIncomeData = await db
       .select({totalIncome : sum(records.amount)})
