@@ -355,6 +355,6 @@ Sample response:
 
 ```bash
 npm run dev          # Start server with hot reload
-npm run db:generate  # Generate migration files from schema
-npm run db:migrate   # Run migrations on NeonDB
+npx drizzle-kit generate  # Generate migration files from schema
+npx drizzle-kit migrate   # Run migrations on NeonDB
 ```
