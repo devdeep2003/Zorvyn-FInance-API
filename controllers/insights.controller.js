@@ -45,7 +45,7 @@ export const getMonthlyInsights = async (req, res) => {
     const response = await generateInsightsGroq(prompt);
 
     return res.status(200).json({
-      message: "Weekly insights generated successfully",
+      message: "Monthly insights generated successfully",
       email: email,
       data: response,
     });
