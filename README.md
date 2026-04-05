@@ -150,11 +150,11 @@ npm run dev
 POST /api/auth/login — Public
 Login with email and password, returns JWT token.
 
-Request body:
+Request body: (Admin : Test Credential)
 ```json
 {
-  "email": "admin@gmail.com",
-  "password": "123456"
+  "email": "deep@gmail.com",
+  "password": "deep1234"
 }
 ```
 
@@ -165,9 +165,55 @@ Response:
   "jwtToken": "eyJhbGci...",
   "data": {
     "id": 1,
-    "name": "Admin",
-    "email": "admin@gmail.com",
+    "name": "Deep",
+    "email": "deep@gmail.com",
     "role": "admin",
+    "is_active": true
+  }
+}
+```
+
+Request body: (Viewer : Test Credential)
+```json
+{
+  "email": "anamika@gmail.com",
+  "password": "12345678"
+}
+```
+
+Response:
+```json
+{
+  "message": "Login Successful",
+  "jwtToken": "eyJhbGci...",
+  "data": {
+    "id": 1,
+    "name": "Anamika",
+    "email": "anamika@gmail.com",
+    "role": "viewer",
+    "is_active": true
+  }
+}
+```
+
+Request body: (Analyst : Test Credential)
+```json
+{
+  "email": "ramesh@gmail.com",
+  "password": "12345678"
+}
+```
+
+Response:
+```json
+{
+  "message": "Login Successful",
+  "jwtToken": "eyJhbGci...",
+  "data": {
+    "id": 1,
+    "name": "Ramesh",
+    "email": "ramesh@gmail.com",
+    "role": "analyst",
     "is_active": true
   }
 }
